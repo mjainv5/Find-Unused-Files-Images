@@ -10,7 +10,7 @@ unusedfiles="";
 let count=0;
 let totalsize=0;
 # collect the files needs to be introspected
-project=`find $1 -name '*.?ib' -o -name '*.[mh]' -o -name '*.storyboard'`
+project=`find $1 -name '*.?ib' -o -name '*.[mh]' -o -name '*.storyboard' -o -name '*.swift'`
 
 for i in `find $1 -name '*.gif' -o -name '*.jpg' -o -name '*.JPG' -o -name '*.png' -o -name '*.PNG' -o -name '*.jpeg' -o -name '*.JPEG'`; do
 file=`basename -s .jpg "$i" | xargs basename -s .JPG | xargs basename -s .png | xargs basename -s .PNG | xargs basename -s @2x | xargs basename -s @3x`
