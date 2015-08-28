@@ -11,7 +11,8 @@ Steps for using this script are following:
 Step 1: Create folder<Project_Name_Unused_Images> on Desktop.
 Step 2: Open terminal and cd to that folder(cd and drag folder to terminal).
 Step 3: Type this command on terminal: 
-	sh find-unused-resources.sh Project_Path > unused_images.html
+	
+sh find-unused-resources.sh Project_Path > unused_images.html
 
 Note: <Project_Path> Remove this and drag the project folder and press Enter.
 
