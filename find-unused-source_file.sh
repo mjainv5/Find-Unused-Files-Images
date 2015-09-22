@@ -6,6 +6,18 @@ echo "<h2> Unused resources </h2>"
 #usual disclaimer
 #echo "<i> <b>Note:</b> This scans all the xib, nib files for the images available. Please look for splash screens or other images carefully in the below list which are used in the project definition (pbxproj file).<br>In order for links to work the report file must be in the same folder as project.</i>"
 
+
+count=0;
+unusedfiles="";
+
+project=`find $1 -name '*.[mh]' -o -name "*.pch" -o -name '*.storyboard'`
+
+for i in `find $1 -name "*.[h]"`; do
+
+file=`basename "$i"`;
+
+mfile=`basename "$i" .h`;
+
 if ! grep -q --exclude="$mfile\.*" $mfile $project; then
 
 if [[ $i == *"SDK"* ]]
